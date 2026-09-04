@@ -1,0 +1,144 @@
+@import "./index.css";
+
+
+/* =========================
+   Main Container
+========================= */
+
+.about-container {
+  @apply w-full max-w-6xl mx-auto
+         py-10 sm:py-12 lg:py-16
+         px-4 sm:px-6;
+}
+
+
+/* =========================
+   Story Section
+========================= */
+
+.about-top {
+  @apply flex flex-col
+         lg:flex-row
+         items-center
+         gap-8 lg:gap-16
+         mb-12 lg:mb-20;
+}
+
+
+.about-text {
+  @apply w-full
+         lg:flex-1
+         flex flex-col
+         gap-5 lg:gap-6;
+}
+
+
+.about-title {
+  @apply text-3xl
+         sm:text-4xl
+         font-bold
+         text-neutral-600;
+}
+
+
+.about-paragraph {
+  @apply text-sm
+         sm:text-base
+         text-neutral-400
+         leading-relaxed;
+}
+
+
+.about-img {
+  @apply w-full
+         lg:flex-1
+         h-[300px]
+         sm:h-[400px]
+         lg:h-[500px]
+         rounded-lg
+         object-cover;
+}
+
+
+/* =========================
+   Statistics
+========================= */
+
+.about-stats {
+  @apply grid
+         grid-cols-1
+         sm:grid-cols-2
+         lg:grid-cols-4
+         gap-4
+         sm:gap-5
+         lg:gap-6;
+}
+
+
+.stat-card {
+  @apply flex
+         flex-col
+         items-center
+         justify-center
+         gap-3
+         border
+         rounded-lg
+         py-8
+         sm:py-10
+         px-4
+         text-center
+         transition-all
+         duration-200
+         hover:shadow-lg;
+}
+
+
+.stat-icon {
+  @apply bg-neutral-600
+         text-white
+         rounded-full
+         w-12 h-12
+         sm:w-14 sm:h-14
+         flex
+         items-center
+         justify-center
+         text-xl
+         sm:text-2xl;
+}
+
+
+.stat-number {
+  @apply text-xl
+         sm:text-2xl
+         font-bold
+         text-neutral-600;
+}
+
+
+.stat-label {
+  @apply text-xs
+         sm:text-sm
+         text-neutral-400;
+}
+
+
+/* =========================
+   Active Card
+========================= */
+
+.stat-card-active {
+  @apply bg-primary-500
+         border-primary-500;
+}
+
+
+.stat-card-active .stat-icon {
+  @apply bg-white
+         text-primary-500;
+}
+
+
+.stat-card-active .stat-number,
+.stat-card-active .stat-label {
+  @apply text-white;
+}

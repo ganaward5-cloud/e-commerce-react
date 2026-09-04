@@ -1,0 +1,229 @@
+
+@import './index.css';
+
+/* =========================
+   Footer
+========================= */
+
+.footer {
+    @apply bg-neutral-600 text-white;
+}
+
+.footer-container {
+    @apply max-w-[1200px] mx-auto
+           px-8 py-16
+           grid grid-cols-5
+           gap-8;
+}
+
+/* =========================
+   Columns
+========================= */
+
+.footer-column {
+    @apply flex flex-col min-w-0;
+}
+
+.footer-title {
+    @apply text-xl font-bold mb-5 font-heading;
+}
+
+.footer-subtitle {
+    @apply text-base font-semibold mb-5;
+}
+
+.footer-subscribe {
+    @apply text-sm text-neutral-300
+           mb-5
+           leading-relaxed;
+}
+
+/* =========================
+   Email Subscribe
+========================= */
+
+.footer-email {
+    @apply w-full max-w-[220px]
+           h-11
+           border border-neutral-300
+           rounded-md
+           flex items-center
+           overflow-hidden
+           transition-colors duration-200
+           focus-within:border-white;
+}
+
+.footer-email input {
+    @apply w-full h-full
+           bg-transparent
+           outline-none
+           border-none
+           px-3
+           text-sm text-white
+           min-w-0;
+}
+
+.footer-email input::placeholder {
+    @apply text-neutral-400;
+}
+
+.footer-email button {
+    @apply w-10 h-full
+           shrink-0
+           flex items-center justify-center
+           text-lg
+           bg-transparent
+           text-white
+           border-none
+           cursor-pointer
+           transition-colors duration-200
+           hover:text-primary-500;
+}
+
+/* =========================
+   Footer Text / Links
+========================= */
+
+.footer-text {
+    @apply text-sm text-neutral-300
+           leading-6 mb-3;
+}
+
+.footer-link {
+    @apply text-sm text-neutral-300
+           mb-4
+           cursor-pointer
+           transition-colors duration-200
+           hover:text-white
+           w-fit;
+}
+
+/* =========================
+   Download App
+========================= */
+
+.footer-download {
+    @apply flex flex-col;
+}
+
+.footer-download > p {
+    @apply text-xl font-semibold
+           text-white
+           mb-5;
+}
+
+.footer-apps {
+    @apply flex items-start
+           gap-3 mb-6;
+}
+
+.footer-qr {
+    @apply w-24 h-24
+           shrink-0
+           object-contain
+           bg-white
+           rounded-md
+           p-1;
+}
+
+.footer-store {
+    @apply flex flex-col
+           gap-6
+           justify-center;
+}
+
+.footer-store img {
+    @apply w-[150px]
+           max-w-full
+           h-auto
+           object-contain
+           transition-transform duration-200
+           hover:scale-105;
+}
+
+/* =========================
+   Social Icons
+========================= */
+
+.footer-social {
+    @apply flex items-center
+           gap-5 mt-2;
+}
+
+.footer-social svg {
+    @apply w-6 h-6
+           cursor-pointer
+           text-primary-500
+           transition-all duration-200
+           hover:scale-110
+           hover:text-primary-600;
+}
+
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 1000px) {
+
+    .footer-container {
+        @apply grid-cols-3
+               gap-10
+               px-8;
+    }
+}
+
+
+/* =========================
+   Small Tablet
+========================= */
+
+@media (max-width: 700px) {
+
+    .footer-container {
+        @apply grid-cols-2
+               gap-10
+               px-6
+               py-12;
+    }
+
+    .footer-apps {
+        @apply flex-wrap;
+    }
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 500px) {
+
+    .footer-container {
+        @apply grid-cols-1
+               gap-8
+               px-5
+               py-10;
+    }
+
+    .footer-column {
+        @apply w-full;
+    }
+
+    .footer-email {
+        @apply max-w-full;
+    }
+
+    .footer-apps {
+        @apply flex-nowrap;
+    }
+
+    .footer-store img {
+        @apply w-[130px];
+    }
+
+    .footer-social {
+        @apply gap-4;
+    }
+}
+

@@ -1,0 +1,124 @@
+
+@import "./index.css";
+
+/* =========================
+   Login Container
+========================= */
+
+.login-container {
+  @apply flex flex-col
+         gap-4
+         w-full max-w-sm
+         mx-auto
+         py-24
+         px-4;
+}
+
+/* =========================
+   Title
+========================= */
+
+.login-title {
+  @apply text-3xl
+         font-bold
+         text-neutral-600;
+}
+
+.login-subtitle {
+  @apply text-neutral-400
+         mb-4;
+}
+
+/* =========================
+   Fields
+========================= */
+
+.login-fields {
+  @apply flex flex-col
+         gap-8;
+}
+
+.login-fields input {
+  @apply w-full
+         border-b
+         border-neutral-300
+         outline-none
+         py-2
+         text-neutral-600
+         transition-all duration-200
+         placeholder-neutral-300
+         focus:border-primary-500;
+}
+
+/* =========================
+   Actions
+========================= */
+
+.login-actions {
+  @apply flex items-center
+         justify-between
+         gap-4
+         mt-4;
+}
+
+.login-btn {
+  @apply bg-primary-500
+         text-white
+         px-8 py-3
+         rounded-md
+         transition-all duration-200
+         hover:bg-primary-600
+         hover:shadow-md
+         hover:-translate-y-0.5
+         active:translate-y-0;
+}
+
+.login-forgot {
+  @apply text-primary-500
+         text-sm
+         cursor-pointer
+         transition-colors duration-200
+         hover:text-primary-600;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 500px) {
+
+  .login-container {
+    @apply max-w-full
+           py-16
+           px-5;
+  }
+
+  .login-title {
+    @apply text-2xl;
+  }
+
+  .login-subtitle {
+    @apply text-sm;
+  }
+
+  .login-fields {
+    @apply gap-7;
+  }
+
+  .login-actions {
+    @apply flex-col
+           items-stretch
+           gap-4;
+  }
+
+  .login-btn {
+    @apply w-full
+           text-center;
+  }
+
+  .login-forgot {
+    @apply text-center;
+  }
+}
+

@@ -1,0 +1,262 @@
+@import "./index.css";
+
+
+/* =========================
+   Account Page
+========================= */
+
+.account-page {
+  @apply w-full
+         max-w-7xl
+         mx-auto
+         my-8 lg:my-12
+         px-4 sm:px-6 lg:px-10
+         grid
+         grid-cols-1
+         gap-8 lg:gap-16
+         font-sans;
+}
+
+
+/* =========================
+   Sidebar
+========================= */
+
+.account-sidebar {
+  @apply pt-1
+         w-full;
+}
+
+.sidebar-section {
+  @apply mb-6;
+}
+
+.sidebar-section h3 {
+  @apply m-0
+         mb-3
+         text-sm
+         font-semibold
+         text-neutral-800;
+}
+
+.sidebar-links {
+  @apply flex
+         flex-col
+         gap-2;
+}
+
+.sidebar-links div {
+  @apply text-xs
+         text-neutral-400
+         cursor-pointer
+         transition-colors
+         duration-200;
+}
+
+.sidebar-links div:hover {
+  @apply text-red-500;
+}
+
+.sidebar-links .active {
+  @apply text-red-500;
+}
+
+
+/* =========================
+   Profile Card
+========================= */
+
+.profile-card {
+  @apply bg-white
+         w-full
+         px-5 sm:px-8 lg:px-14
+         py-7 sm:py-8 lg:py-10
+         rounded-sm
+         shadow-[0_3px_20px_rgba(0,0,0,0.07)];
+}
+
+.profile-card h2 {
+  @apply m-0
+         mb-6 lg:mb-7
+         text-lg
+         font-medium
+         text-red-500;
+}
+
+
+/* =========================
+   Form
+========================= */
+
+.profile-form {
+  @apply flex
+         flex-col
+         gap-5;
+}
+
+.form-row {
+  @apply grid
+         grid-cols-1
+         md:grid-cols-2
+         gap-5 lg:gap-10;
+}
+
+.form-group {
+  @apply flex
+         flex-col
+         gap-2
+         min-w-0;
+}
+
+.form-group label,
+.password-section label {
+  @apply text-sm
+         font-medium
+         text-neutral-800;
+}
+
+.form-group input,
+.password-section input {
+  @apply w-full
+         h-11
+         px-4
+         border
+         border-transparent
+         outline-none
+         bg-neutral-100
+         rounded
+         text-sm
+         text-neutral-700
+         transition-all
+         duration-300
+         ease-in-out;
+}
+
+
+/* =========================
+   Input Focus
+========================= */
+
+.form-group input:focus,
+.password-section input:focus {
+  @apply bg-white
+         border-red-400
+         shadow-[0_0_0_3px_rgba(239,68,68,0.10)];
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   Placeholder
+========================= */
+
+.form-group input::placeholder,
+.password-section input::placeholder {
+  @apply text-neutral-400
+         transition-all
+         duration-300;
+}
+
+.form-group input:focus::placeholder,
+.password-section input:focus::placeholder {
+  @apply text-neutral-300;
+}
+
+
+/* =========================
+   Password Section
+========================= */
+
+.password-section {
+  @apply flex
+         flex-col
+         gap-4;
+}
+
+
+/* =========================
+   Actions
+========================= */
+
+.form-actions {
+  @apply flex
+         flex-col-reverse
+         sm:flex-row
+         justify-end
+         items-stretch
+         sm:items-center
+         gap-4 sm:gap-6
+         mt-4;
+}
+
+.cancel-btn {
+  @apply border-none
+         bg-transparent
+         text-sm
+         text-neutral-800
+         cursor-pointer
+         transition-colors
+         duration-200;
+}
+
+.cancel-btn:hover {
+  @apply text-red-500;
+}
+
+.save-btn {
+  @apply w-full
+         sm:w-36
+         h-11
+         border-none
+         rounded
+         bg-red-500
+         text-white
+         text-sm
+         cursor-pointer
+         transition-all
+         duration-300;
+}
+
+.save-btn:hover {
+  @apply bg-red-600
+         shadow-[0_5px_15px_rgba(239,68,68,0.25)];
+
+  transform: translateY(-2px);
+}
+
+.save-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================
+   Error
+========================= */
+
+.error-message {
+  @apply text-red-500
+         text-sm
+         font-medium
+         mt-2
+         transition
+         duration-300;
+}
+
+.error-message:hover {
+  @apply text-red-600
+         drop-shadow-[0_0_5px_rgba(239,68,68,0.8)];
+}
+
+
+/* =========================
+   Desktop
+========================= */
+
+@media (min-width: 1024px) {
+
+  .account-page {
+    @apply grid-cols-[200px_1fr];
+  }
+
+}

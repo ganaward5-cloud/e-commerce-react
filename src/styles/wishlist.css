@@ -1,0 +1,88 @@
+
+@import './index.css';
+
+/* =========================
+   Wishlist Page
+========================= */
+
+.wishlist-page {
+    @apply w-full
+           max-w-6xl
+           mx-auto
+           px-5
+           py-10;
+}
+
+.wishlist-title {
+    @apply text-2xl
+           font-semibold
+           mb-8
+           text-neutral-700;
+}
+
+.wishlist-grid {
+    @apply grid
+           grid-cols-2
+           sm:grid-cols-3
+           md:grid-cols-4
+           gap-6
+           items-stretch;
+}
+
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 768px) {
+
+    .wishlist-page {
+        @apply px-4
+               py-8;
+    }
+
+    .wishlist-title {
+        @apply text-xl
+               mb-6;
+    }
+
+    .wishlist-grid {
+        @apply gap-4;
+    }
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 500px) {
+
+    .wishlist-page {
+        @apply px-3
+               py-6;
+    }
+
+    .wishlist-title {
+        @apply text-xl
+               mb-5;
+    }
+
+    .wishlist-grid {
+        @apply grid-cols-2
+               gap-3;
+    }
+}
+
+
+/* =========================
+   Very Small Screens
+========================= */
+
+@media (max-width: 360px) {
+
+    .wishlist-grid {
+        @apply gap-2;
+    }
+}
+

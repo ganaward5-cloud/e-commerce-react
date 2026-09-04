@@ -1,0 +1,45 @@
+@import "./index.css";
+
+
+.notfound-container {
+  @apply min-h-[60vh]
+         flex flex-col
+         items-center
+         justify-center
+         gap-4
+         px-4
+         py-20
+         text-center;
+}
+
+
+.notfound-title {
+  @apply text-4xl
+         sm:text-5xl
+         lg:text-6xl
+         font-bold
+         text-neutral-600;
+}
+
+
+.notfound-text {
+  @apply text-sm
+         sm:text-base
+         text-neutral-400
+         max-w-md;
+}
+
+
+.notfound-btn {
+  @apply inline-block
+         bg-primary-500
+         text-white
+         px-5 sm:px-6
+         py-3
+         rounded-md
+         mt-4
+         text-sm sm:text-base
+         transition-all duration-200
+         hover:bg-primary-600
+         active:scale-95;
+}

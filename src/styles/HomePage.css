@@ -1,0 +1,174 @@
+@import "./index.css";
+
+/* =========================
+   Home Page
+========================= */
+
+.home-page {
+  @apply min-h-screen bg-white;
+}
+
+.home-content {
+  @apply max-w-7xl mx-auto px-6;
+}
+
+/* =========================
+   Shared Section Styles
+========================= */
+
+.section-header {
+  @apply flex items-end justify-between mb-8;
+}
+
+.section-heading {
+  @apply flex flex-col gap-2;
+}
+
+.section-label {
+  @apply text-xs font-medium text-red-500;
+}
+
+.section-title {
+  @apply text-2xl font-semibold text-gray-900;
+}
+
+/* =========================
+   Flash Sale
+========================= */
+
+.flash-sale-section {
+  @apply py-10 border-b border-gray-200;
+}
+
+.flash-sale-timer {
+  @apply flex items-center gap-3 ml-10;
+}
+
+.timer-item {
+  @apply flex flex-col items-center;
+}
+
+.timer-number {
+  @apply text-xl font-bold text-gray-900;
+}
+
+.timer-label {
+  @apply text-[10px] text-gray-500;
+}
+
+.timer-separator {
+  @apply text-xl font-bold text-red-500;
+}
+
+.section-navigation {
+  @apply flex gap-2;
+}
+
+.navigation-btn {
+  @apply w-9 h-9 rounded-full bg-gray-100 text-gray-700
+  flex items-center justify-center
+  hover:bg-gray-200 transition;
+}
+
+/* =========================
+   Products
+========================= */
+
+.products-grid {
+  @apply grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5;
+}
+
+.flash-sale-products {
+  @apply overflow-hidden;
+}
+
+.view-products-btn {
+  @apply block mx-auto mt-8 px-8 py-3
+  bg-red-500 text-white text-sm font-medium
+  rounded-sm
+  hover:bg-red-600 transition;
+}
+
+/* =========================
+   Categories
+========================= */
+
+.categories-section {
+  @apply py-10 border-b border-gray-200;
+}
+
+.categories-grid {
+  @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-8;
+}
+
+.category-card {
+  @apply h-28 border border-gray-200
+  flex flex-col items-center justify-center gap-3
+  cursor-pointer
+  hover:bg-red-500 hover:text-white
+  hover:border-red-500
+  transition;
+}
+
+.category-icon {
+  @apply text-2xl;
+}
+
+.category-name {
+  @apply text-xs font-medium;
+}
+
+/* =========================
+   Best Selling
+========================= */
+
+.best-selling-section {
+  @apply py-10;
+}
+
+.best-selling-products {
+  @apply mt-8;
+}
+
+.view-all-btn {
+  @apply px-8 py-3
+  bg-red-500 text-white text-sm font-medium
+  rounded-sm
+  hover:bg-red-600 transition;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+  .home-content {
+    @apply px-4;
+  }
+
+  .section-header {
+    @apply flex-wrap gap-5;
+  }
+
+  .flash-sale-timer {
+    @apply ml-0;
+  }
+}
+
+@media (max-width: 640px) {
+  .section-title {
+    @apply text-xl;
+  }
+
+  .products-grid {
+    @apply grid-cols-2 gap-3;
+  }
+
+  .categories-grid {
+    @apply grid-cols-3;
+  }
+
+  .category-card {
+    @apply h-24;
+  }
+}

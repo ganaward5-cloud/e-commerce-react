@@ -1,0 +1,312 @@
+
+@import "./index.css";
+
+/* =========================
+   Navbar
+========================= */
+
+.navbar {
+  @apply flex items-center justify-between
+         gap-6
+         px-8 py-4
+         bg-white
+         shadow-sm
+         border-b border-neutral-200
+         sticky top-0 z-50;
+}
+
+/* =========================
+   Logo
+========================= */
+
+.logo {
+  @apply text-3xl font-bold
+         py-2
+         text-primary-600
+         font-heading
+         tracking-tight
+         transition-colors duration-200
+         cursor-pointer
+         hover:text-primary-500
+         shrink-0;
+}
+
+/* =========================
+   Navigation Links
+========================= */
+
+.links {
+  @apply flex items-center
+         gap-8
+         list-none
+         shrink-0;
+}
+
+.links li a {
+  @apply text-sm font-medium
+         text-neutral-600
+         transition-colors duration-200
+         relative pb-1
+         whitespace-nowrap;
+}
+
+.links li a::after {
+  content: '';
+  @apply absolute
+         left-0 bottom-0
+         w-0 h-[2px]
+         bg-primary-500
+         transition-all duration-300;
+}
+
+.links li a:hover {
+  @apply text-primary-500;
+}
+
+.links li a:hover::after {
+  @apply w-full;
+}
+
+/* =========================
+   Search
+========================= */
+
+.search {
+  @apply flex items-center
+         border border-neutral-200
+         rounded-lg
+         px-4 py-2
+         gap-2
+         min-w-0
+         transition-all duration-200
+         focus-within:border-primary-500
+         focus-within:ring-2
+         focus-within:ring-primary-300;
+}
+
+.search input {
+  @apply outline-none
+         bg-transparent
+         text-sm
+         w-48
+         min-w-0;
+}
+
+.search svg {
+  @apply text-neutral-400
+         shrink-0
+         transition-colors duration-200;
+}
+
+.search:focus-within svg {
+  @apply text-primary-500;
+}
+
+/* =========================
+   Icons
+========================= */
+
+.icons {
+  @apply flex items-center
+         gap-5
+         shrink-0;
+}
+
+.icons svg {
+  @apply w-6 h-6
+         text-primary-500
+         cursor-pointer
+         transition-all duration-200
+         hover:scale-110
+         hover:text-primary-600;
+}
+
+/* =========================
+   Cart
+========================= */
+
+.cart-wrapper {
+  @apply relative inline-flex;
+}
+
+.cart-link {
+  @apply flex items-center
+         justify-center
+         text-2xl
+         transition-transform duration-200
+         hover:scale-110;
+}
+
+.cart-count {
+  @apply absolute
+         -top-2 -right-2
+         min-w-5 h-5
+         px-1
+         flex items-center justify-center
+         rounded-full
+         bg-red-500
+         text-white
+         text-[11px]
+         font-bold
+         border-2 border-white
+         z-10
+         transition-all duration-300;
+         
+  animation: cartBadge 1.8s ease-in-out infinite;
+}
+
+
+/* =========================
+   Cart Animation
+========================= */
+
+@keyframes cartBadge {
+
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 1050px) {
+
+  .navbar {
+    @apply px-5 gap-4;
+  }
+
+  .logo {
+    @apply text-2xl;
+  }
+
+  .links {
+    @apply gap-5;
+  }
+
+  .search input {
+    @apply w-32;
+  }
+
+  .icons {
+    @apply gap-4;
+  }
+}
+
+
+/* =========================
+   Small Tablet
+========================= */
+
+@media (max-width: 800px) {
+
+  .navbar {
+    @apply px-4 gap-4;
+  }
+
+  .links {
+    @apply gap-4;
+  }
+
+  .links li a {
+    @apply text-xs;
+  }
+
+  .search {
+    @apply px-3 py-2;
+  }
+
+  .search input {
+    @apply w-24;
+  }
+
+  .icons svg {
+    @apply w-5 h-5;
+  }
+
+  .cart-link {
+    @apply text-xl;
+  }
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 650px) {
+
+  .navbar {
+    @apply flex-wrap
+           px-4 py-3
+           gap-4;
+  }
+
+  .logo {
+    @apply text-2xl;
+  }
+
+  .links {
+    @apply order-3
+           w-full
+           justify-center
+           gap-5;
+  }
+
+  .links li a {
+    @apply text-xs;
+  }
+
+  .search {
+    @apply order-2
+           flex-1;
+  }
+
+  .search input {
+    @apply w-full;
+  }
+
+  .icons {
+    @apply gap-3;
+  }
+}
+
+/* =========================
+   Small Mobile
+========================= */
+
+@media (max-width: 400px) {
+
+  .navbar {
+    @apply px-3;
+  }
+
+  .logo {
+    @apply text-xl;
+  }
+
+  .icons {
+    @apply gap-3;
+  }
+
+  .icons svg {
+    @apply w-5 h-5;
+  }
+
+  .cart-link {
+    @apply text-lg;
+  }
+
+  .cart-count {
+    @apply -top-2 -right-2
+           min-w-4 h-4
+           text-[9px];
+  }
+}
+

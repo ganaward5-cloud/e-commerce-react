@@ -1,0 +1,163 @@
+
+@import './index.css';
+
+/* =========================
+   Product Card
+========================= */
+
+.product-card {
+    @apply w-full
+           max-w-[250px]
+           p-4
+           rounded-lg
+           bg-neutral-100
+           transition-all duration-300
+           ease-in-out
+           hover:-translate-y-1
+           hover:shadow-lg;
+}
+
+.product-card img {
+    @apply w-full
+           h-[160px]
+           object-contain
+           mb-4
+           transition-transform duration-300
+           hover:scale-105;
+}
+
+.product-card h4 {
+    @apply text-sm
+           font-medium
+           text-neutral-800
+           line-clamp-2
+           min-h-[40px]
+           mb-2;
+}
+
+.product-card p {
+    @apply text-lg
+           font-semibold
+           text-red-500
+           mb-4;
+}
+
+.add-to-cart-btn {
+    @apply w-full
+           py-2.5
+           px-4
+           bg-black
+           text-white
+           rounded-md
+           text-sm
+           font-medium
+           cursor-pointer
+           transition-all duration-300
+           hover:bg-neutral-800
+           active:scale-95;
+}
+
+
+/* =========================
+   Wishlist Heart
+========================= */
+
+.heart-empty,
+.heart-filled {
+    @apply bg-transparent
+           border-none
+           p-2
+           cursor-pointer
+           inline-flex
+           items-center
+           justify-center
+           text-xl
+           transition-all duration-200;
+}
+
+.heart-empty {
+    @apply text-neutral-400
+           hover:text-red-500
+           hover:scale-110;
+}
+
+.heart-filled {
+    @apply text-red-500
+           scale-110;
+}
+
+.heart-filled:hover {
+    @apply text-red-700
+           scale-125;
+}
+
+.heart-filled:hover svg {
+    fill: currentColor;
+}
+
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 768px) {
+
+    .product-card {
+        @apply max-w-none
+               p-3;
+    }
+
+    .product-card img {
+        @apply h-[140px];
+    }
+
+    .product-card h4 {
+        @apply text-sm;
+    }
+
+    .product-card p {
+        @apply text-base;
+    }
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 500px) {
+
+    .product-card {
+        @apply p-3
+               rounded-md;
+    }
+
+    .product-card img {
+        @apply h-[120px]
+               mb-3;
+    }
+
+    .product-card h4 {
+        @apply text-xs
+               min-h-[36px]
+               mb-2;
+    }
+
+    .product-card p {
+        @apply text-base
+               mb-3;
+    }
+
+    .add-to-cart-btn {
+        @apply py-2
+               px-2
+               text-xs;
+    }
+
+    .heart-empty,
+    .heart-filled {
+        @apply text-lg
+               p-1.5;
+    }
+}
+

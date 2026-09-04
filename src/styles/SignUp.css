@@ -1,0 +1,119 @@
+
+@import "./index.css";
+
+/* =========================
+   Signup
+========================= */
+
+.signup-container {
+    @apply flex flex-col
+           gap-4
+           w-full
+           max-w-sm
+           mx-auto
+           py-16
+           px-4;
+}
+
+.signup-title {
+    @apply text-3xl
+           font-bold
+           text-neutral-600;
+}
+
+.signup-subtitle {
+    @apply text-neutral-400
+           mb-4;
+}
+
+.signup-fields {
+    @apply flex flex-col
+           gap-8;
+}
+
+.signup-fields input {
+    @apply w-full
+           border-b
+           border-neutral-300
+           outline-none
+           py-2
+           text-neutral-600
+           transition-all duration-200
+           placeholder-neutral-300
+           focus:border-primary-500;
+}
+
+.signup-actions {
+    @apply flex flex-col
+           gap-4
+           mt-6;
+}
+
+.signup-btn {
+    @apply bg-primary-500
+           text-white
+           py-3
+           rounded-md
+           w-full
+           transition-all duration-200
+           hover:bg-primary-600
+           hover:shadow-md
+           hover:-translate-y-0.5
+           active:translate-y-0;
+}
+
+.google-btn {
+    @apply flex items-center
+           justify-center
+           gap-2
+           border
+           border-neutral-300
+           py-3
+           rounded-md
+           w-full
+           transition-all duration-200
+           hover:bg-neutral-50;
+}
+
+.signup-login-link {
+    @apply flex items-center
+           justify-center
+           gap-2
+           text-sm
+           mt-4;
+}
+
+.login-link {
+    @apply text-neutral-600
+           underline
+           cursor-pointer
+           transition-colors duration-200
+           hover:text-primary-500;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 500px) {
+
+    .signup-container {
+        @apply max-w-full
+               py-12
+               px-5;
+    }
+
+    .signup-title {
+        @apply text-2xl;
+    }
+
+    .signup-subtitle {
+        @apply text-sm;
+    }
+
+    .signup-fields {
+        @apply gap-7;
+    }
+}
+
